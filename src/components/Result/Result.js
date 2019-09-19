@@ -1,5 +1,6 @@
 import React from "react";
 import "./Result.css";
+import propTypes from "prop-types";
 
 class Result extends React.Component {
 	constructor(props) {
@@ -12,5 +13,7 @@ class Result extends React.Component {
 		return <div></div>;
 	}
 }
+
+Result.propTypes = {};
 
 export default Result;

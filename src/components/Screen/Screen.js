@@ -1,5 +1,6 @@
 import React from "react";
 import "./Screen.css";
+import propTypes from "prop-types";
 
 class Screen extends React.Component {
 	constructor(props) {
@@ -12,5 +13,7 @@ class Screen extends React.Component {
 		return <div></div>;
 	}
 }
+
+Screen.propTypes = {};
 
 export default Screen;
