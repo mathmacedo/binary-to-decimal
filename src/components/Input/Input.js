@@ -2,6 +2,11 @@ import React from "react";
 import "./Input.css";
 import propTypes from "prop-types";
 
+/**
+ * Component input
+ * @class Input
+ * @constructor
+ */
 class Input extends React.Component {
 	constructor(props) {
 		super(props);
@@ -10,7 +15,11 @@ class Input extends React.Component {
 	}
 
 	render() {
-		return <div></div>;
+		return (
+			<div>
+				<input></input>
+			</div>
+		);
 	}
 }
 

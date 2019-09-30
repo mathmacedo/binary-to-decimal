@@ -2,6 +2,12 @@ import React from "react";
 import "./Screen.css";
 import propTypes from "prop-types";
 
+import Input from "../Input/Input";
+/**
+ * This is the component screen
+ * @class Screen
+ * @constructor
+ */
 class Screen extends React.Component {
 	constructor(props) {
 		super(props);
@@ -10,7 +16,11 @@ class Screen extends React.Component {
 	}
 
 	render() {
-		return <div></div>;
+		return (
+			<div>
+				<Input></Input>
+			</div>
+		);
 	}
 }
 
