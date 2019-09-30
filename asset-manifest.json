@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/binary-to-decimal/static/css/main.52216b03.chunk.css",
+    "main.js": "/binary-to-decimal/static/js/main.1ea15fec.chunk.js",
+    "main.js.map": "/binary-to-decimal/static/js/main.1ea15fec.chunk.js.map",
+    "runtime~main.js": "/binary-to-decimal/static/js/runtime~main.b57ee7bd.js",
+    "runtime~main.js.map": "/binary-to-decimal/static/js/runtime~main.b57ee7bd.js.map",
+    "static/js/2.c49eab6b.chunk.js": "/binary-to-decimal/static/js/2.c49eab6b.chunk.js",
+    "static/js/2.c49eab6b.chunk.js.map": "/binary-to-decimal/static/js/2.c49eab6b.chunk.js.map",
+    "index.html": "/binary-to-decimal/index.html",
+    "precache-manifest.284ce6e0b1eb0ac198925ccdd584a836.js": "/binary-to-decimal/precache-manifest.284ce6e0b1eb0ac198925ccdd584a836.js",
+    "service-worker.js": "/binary-to-decimal/service-worker.js",
+    "static/css/main.52216b03.chunk.css.map": "/binary-to-decimal/static/css/main.52216b03.chunk.css.map"
+  }
+}
