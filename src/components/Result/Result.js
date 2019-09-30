@@ -15,10 +15,18 @@ class Result extends React.Component {
 	}
 
 	render() {
-		return <div></div>;
+		return (
+			<div>
+				<div>
+					<div>{this.props.result}</div>
+				</div>
+			</div>
+		);
 	}
 }
 
-Result.propTypes = {};
+Result.propTypes = {
+	result: propTypes.oneOfType([propTypes.string, propTypes.number]).isRequired
+};
 
 export default Result;
