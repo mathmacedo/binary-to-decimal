@@ -1,4 +1,4 @@
-## Online
+## Demo Online
 
 https://mathmacedo.github.io/binary-to-decimal/
 
