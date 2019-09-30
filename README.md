@@ -1,3 +1,7 @@
+## Online
+
+https://mathmacedo.github.io/binary-to-decimal/
+
 ## Binary To Decimal
 
 Projeto criado para converter números binários para decimais. Ideia retirada do https://github.com/florinpop17/app-ideas
