@@ -42,7 +42,17 @@ class Input extends React.Component {
 
 	render() {
 		return (
-			<div style={{ display: "inline-flex" }}>
+			<div
+				style={{
+					display: "inline-flex",
+					height: "100px",
+					backgroundColor: "#1db3ac",
+					alignItems: "center",
+					padding: "0 10px",
+					margin: "30px 0",
+					width: "30%"
+				}}
+			>
 				<span>Digite o número em decimal a ser convertido: </span>
 				<div style={{ margin: "0 10px" }}>
 					<input

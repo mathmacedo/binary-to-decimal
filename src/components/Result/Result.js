@@ -16,10 +16,18 @@ class Result extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<div>
-					<div>{this.props.result}</div>
-				</div>
+			<div
+				style={{
+					display: "inline-flex",
+					height: "100px",
+					backgroundColor: "#92e8a9",
+					alignItems: "center",
+					padding: "0 10px",
+					margin: "30px 0",
+					width: "30%"
+				}}
+			>
+				<span>{this.props.result}</span>
 			</div>
 		);
 	}

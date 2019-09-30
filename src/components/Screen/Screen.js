@@ -33,7 +33,14 @@ class Screen extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div
+				style={{
+					margin: "10px",
+					display: "grid",
+					justifyItems: "center"
+				}}
+			>
+				<h1>Convertedor de decimal para binário</h1>
 				<Input convertedNumber={this.setConvertedNumber}></Input>
 				<Result result={this.state.convertedNumber}></Result>
 			</div>
