@@ -22,6 +22,20 @@ class Input extends React.Component {
 	}
 
 	/**
+	 * Metodo invocado imediatamente após alguma atualização ocorrer
+	 * @method componentDidUpdate
+	 * @param {Object} prevProps objeto props antigo
+	 * @return
+	 */
+	componentDidUpdate(prevProps) {
+		if (this.props.typeConverter != prevProps.typeConverter) {
+			this.setState({
+				inputValue: 0
+			});
+		}
+	}
+
+	/**
 	 * Metodo para atualizar state inputValue com o valor digitado
 	 * @method changeInputValueState
 	 * @param {Object} evt objeto evento
