@@ -18,25 +18,69 @@ class Input extends React.Component {
 		// Bind functions
 		this.changeInputValueState = this.changeInputValueState.bind(this);
 		this.convertToBinary = this.convertToBinary.bind(this);
+		this.defineConverter = this.defineConverter.bind(this);
 	}
 
 	/**
 	 * Metodo para atualizar state inputValue com o valor digitado
 	 * @method changeInputValueState
+	 * @param {Object} evt objeto evento
 	 * @return
 	 */
 	changeInputValueState(evt) {
-		this.setState({
-			inputValue: evt.target.value
-		});
+		var regExp = new RegExp("[^0-1]", "g");
+		if (this.props.typeConverter === "binToDec") {
+			if (regExp.test(evt.target.value)) {
+				var str = evt.target.value.substr(
+					0,
+					evt.target.value.length - 1
+				);
+				alert("Digite apenas números binários");
+				this.setState({
+					inputValue: str
+				});
+			} else {
+				this.setState({
+					inputValue: evt.target.value
+				});
+			}
+		} else {
+			this.setState({
+				inputValue: evt.target.value
+			});
+		}
+	}
+
+	/**
+	 * Metodo para definir qual tipo converter
+	 * @method defineConverter
+	 * @return
+	 */
+	defineConverter() {
+		if (this.props.typeConverter === "binToDec") {
+			this.convertToBinary();
+		} else {
+			this.convertToDecimal();
+		}
+	}
+
+	/**
+	 * Metodo para converter o número binário inputado para decimal
+	 * @method convertToDecimal
+	 * @return
+	 */
+	convertToDecimal() {
+		let convertedNumber = parseInt(this.state.inputValue, 10).toString(2);
+		this.props.convertedNumber(convertedNumber);
 	}
 
 	/**
 	 * Metodo para converter o número decimal inputado para binario
 	 * @method convertToBinary
+	 * @return
 	 */
 	convertToBinary() {
-		let convertedNumber = parseInt(this.state.inputValue, 10).toString(2);
+		let convertedNumber = parseInt(this.state.inputValue, 2).toString();
 		this.props.convertedNumber(convertedNumber);
 	}
 
@@ -53,17 +97,17 @@ class Input extends React.Component {
 					width: "30%"
 				}}
 			>
-				<span>Digite o número em decimal a ser convertido: </span>
+				<span>Digite o número a ser convertido: </span>
 				<div style={{ margin: "0 10px" }}>
 					<input
-						type="number"
-						defaultValue={this.state.inputValue}
+						min={0}
 						onChange={this.changeInputValueState}
-						min="0"
+						type="number"
+						value={this.state.inputValue}
 					></input>
 				</div>
 				<div style={{ margin: "0 10px" }}>
-					<button onClick={this.convertToBinary}>Converter</button>
+					<button onClick={this.defineConverter}>Converter</button>
 				</div>
 			</div>
 		);
@@ -71,7 +115,8 @@ class Input extends React.Component {
 }
 
 Input.propTypes = {
-	convertedNumber: propTypes.func.isRequired
+	convertedNumber: propTypes.func.isRequired,
+	typeConverter: propTypes.string.isRequired
 };
 
 export default Input;
