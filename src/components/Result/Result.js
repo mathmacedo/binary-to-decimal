@@ -18,13 +18,13 @@ class Result extends React.Component {
 		return (
 			<div
 				style={{
-					display: "inline-flex",
+					display: "flex",
 					height: "100px",
 					backgroundColor: "#92e8a9",
 					alignItems: "center",
 					padding: "0 10px",
 					margin: "30px 0",
-					width: "30%"
+					width: "auto"
 				}}
 			>
 				<span>{this.props.result}</span>

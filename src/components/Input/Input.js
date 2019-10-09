@@ -102,13 +102,13 @@ class Input extends React.Component {
 		return (
 			<div
 				style={{
-					display: "inline-flex",
+					display: "flex",
 					height: "100px",
 					backgroundColor: "#1db3ac",
 					alignItems: "center",
 					padding: "0 10px",
 					margin: "30px 0",
-					width: "30%"
+					width: "auto"
 				}}
 			>
 				<span>Digite o número a ser convertido: </span>

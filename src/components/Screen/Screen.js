@@ -49,15 +49,13 @@ class Screen extends React.Component {
 		return (
 			<div
 				style={{
-					margin: "10px",
-					display: "grid",
-					justifyItems: "center"
+					margin: "10px"
 				}}
 			>
-				<h1>
+				<h1 style={{ textAlign: "center" }}>
 					Convertedor de decimal para binário/binário para decimal
 				</h1>
-				<div>
+				<div style={{ display: "flex", justifyContent: "center" }}>
 					<span>Selecione o modo de conversão</span>
 					<select autoFocus={true} onChange={this.setOptionConverter}>
 						<option value="decToBin">Decimal para Binário</option>
